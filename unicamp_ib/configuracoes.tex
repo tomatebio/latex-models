@@ -1,0 +1,87 @@
+% Page style: a4paper, letterpaper
+\documentclass[a4paper,12pt,oneside]{report}
+
+% Margin
+\usepackage[a4paper, left = 3cm, right = 2cm, top = 3cm, bottom = 2cm, includefoot]{geometry}
+
+%Language
+\usepackage[english,brazil]{babel}
+
+% Input character
+\usepackage[utf8]{inputenc}
+
+% Output font character
+\usepackage[T1]{fontenc}
+
+% Package to math
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+% Line spacing
+\usepackage{setspace}
+
+% Disable hypenation
+\usepackage[none]{hyphenat}
+
+% First paragraph Indentation
+\usepackage{indentfirst}
+
+% Graphics
+\usepackage{graphicx}
+\usepackage{float}
+
+% Tables
+\usepackage{array}
+
+% Bibliography
+\usepackage[sectionbib]{natbib}
+
+% Font: Times (ptm)
+\renewcommand{\rmdefault}{ptm}
+
+% Numbering pages
+\pagestyle{plain}
+\pagenumbering{arabic}
+
+% Indentation
+\setlength{\parindent}{2cm}
+
+% Line spacing. Use in each section: \singlespace \onehalfspace \doublespace 
+\onehalfspace
+
+% Change titles formating
+\usepackage{titlesec}
+% Chapter
+\titleformat
+  {\chapter} % command
+  [display] % shape
+  {\normalfont\large\bfseries} % format
+  %{\chaptertitlename\ \thechapter} % label
+  {} % label
+  {-40pt} % sep
+  {} % before code
+  {} % after code
+\titlespacing*{\chapter}
+  {0pt} % left
+  {0pt} % before
+  {20pt} % after
+
+% Section
+\titleformat{\section}
+  {\normalfont\large\bfseries}
+  {\thesection}{12pt}{}{}
+
+% Subsection
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}
+  {\thesubsection}{12pt}{}{}
+
+% Subsubsection
+\titleformat{\subsubsection}
+  {\normalfont\large\bfseries}
+  {\thesubsubsection}{12pt}{}{}
+
+% Number of sections
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}

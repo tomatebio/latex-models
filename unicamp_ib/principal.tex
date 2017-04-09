@@ -1,0 +1,37 @@
+% Definições do documento
+\input{configuracoes.tex}
+
+% Bibliografia por capítulo
+% Descomente a linha abaixo se preferir usar a bibliografia por
+% capítulos. Caso contrário a bibliografia geral será incluída 
+% no final do documeto
+%\usepackage{chapterbib}
+
+\begin{document}
+
+% Elementos pré-textuais
+% Primeira folha, folha de rosto, ficha catalográfica,
+% folha de aprovação, dedicatória, agradecimentos, 
+% resumo, abstract e listas
+\include{elementos_pre-textuais}
+
+% Sumário
+%\renewcommand\contentsname{Índice}
+\tableofcontents
+
+% Capítulos
+\include{cap1}
+\include{cap2}
+
+% Referências
+% Comentar as três linhas abaixo se usar referências por capítulo
+\chapter{Referências Bibliográficas}
+\renewcommand{\bibsection}{}
+\bibliographystyle{apalike}
+\bibliography{bibliografia}
+
+% Elementos pós-textuais
+% Apêndices e anexos
+\include{elementos_pos-textuais}
+
+\end{document}
